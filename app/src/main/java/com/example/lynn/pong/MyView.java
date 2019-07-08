@@ -9,6 +9,8 @@ public class MyView extends RelativeLayout {
 
     public MyView(Context context) {
         super(context);
+
+        setWillNotDraw(false);
     }
 
 }
