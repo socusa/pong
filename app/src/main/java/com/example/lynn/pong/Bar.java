@@ -18,6 +18,8 @@ public class Bar extends RelativeLayout {
         layoutParams.topMargin = starty;
 
         setLayoutParams(layoutParams);
+
+        setBackgroundColor(0xFF8F0000);
     }
 
     public boolean hasCollided() {
