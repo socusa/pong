@@ -40,13 +40,13 @@ public class MyThread implements Runnable {
                 center.y += distancey;
 
             if (leftBar.hasCollided() || rightBar.hasCollided()) {
-                distancex = 20 + (int)(10*Math.random());
+                distancex = 60 + (int)(10*Math.random());
 
                 left = !left;
             }
 
             if (center.y - 50 <= 0 || center.y + 50 >= height-170) {
-                distancey = 20 + (int)(10*Math.random());
+                distancey = 60 + (int)(10*Math.random());
 
                 up = !up;
             }
