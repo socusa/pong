@@ -32,8 +32,6 @@ public class MyView extends RelativeLayout {
 
         paint.setColor(0xFF000000);
 
-        center = new Point(width-100,((height-170)/2));
-
         setWillNotDraw(false);
     }
 

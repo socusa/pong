@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         mp.start();
 
+        center = new Point(width-100,((height-170)/2));
+
         myThread = new MyThread();
 
         setContentView(myView = new MyView(this));
