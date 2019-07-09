@@ -33,6 +33,9 @@ public class MyView extends RelativeLayout {
         left = true;
         up = true;
 
+        distancex = 10;
+        distancey = 10;
+
         myThread = new MyThread();
 
         paint = new Paint();

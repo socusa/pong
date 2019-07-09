@@ -29,9 +29,6 @@ public class MyThread implements Runnable {
     @Override
     public void run() {
         while (keepGoing) {
-            int distancex = 1 + (int)(10*Math.random());
-            int distancey = 1 + (int)(10*Math.random());
-
             if (left)
                 center.x -= distancex;
             else
@@ -42,11 +39,17 @@ public class MyThread implements Runnable {
             else
                 center.y += distancey;
 
-            if (leftBar.hasCollided() || rightBar.hasCollided())
-                left = !left;
+            if (leftBar.hasCollided() || rightBar.hasCollided()) {
+                distancex = 1 + (int)(10*Math.random());
 
-            if (center.y - 50 <= 0 && center.y + 50 >= width-170)
+                left = !left;
+            }
+
+            if (center.y - 50 <= 0 && center.y + 50 >= width-170) {
+                distancey = 1 + (int)(10*Math.random());
+
                 up = !left;
+            }
 
             myView.post(new Runnable() {
 

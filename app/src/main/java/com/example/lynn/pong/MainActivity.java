@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public static MyThread myThread;
     public static boolean left;
     public static boolean up;
+    public static int distancex;
+    public static int distancey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
