@@ -30,6 +30,9 @@ public class MyView extends RelativeLayout {
 
         center = new Point(width-100,((height-170)/2));
 
+        left = true;
+        up = true;
+
         myThread = new MyThread();
 
         paint = new Paint();
