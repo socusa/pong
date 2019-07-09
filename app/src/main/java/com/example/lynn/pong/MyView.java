@@ -28,6 +28,10 @@ public class MyView extends RelativeLayout {
         addView(leftBar);
         addView(rightBar);
 
+        center = new Point(width-100,((height-170)/2));
+
+        myThread = new MyThread();
+
         paint = new Paint();
 
         paint.setColor(0xFF000000);
