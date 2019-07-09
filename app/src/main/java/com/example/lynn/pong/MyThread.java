@@ -45,7 +45,7 @@ public class MyThread implements Runnable {
                 left = !left;
             }
 
-            if (center.y - 50 <= 0 && center.y + 50 >= width-170) {
+            if (center.y - 50 <= 0 || center.y + 50 >= height-170) {
                 distancey = 1 + (int)(10*Math.random());
 
                 up = !left;
