@@ -1,12 +1,15 @@
 package com.example.lynn.pong;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Point;
 import android.widget.RelativeLayout;
 
 import static com.example.lynn.pong.MainActivity.*;
 
 public class MyView extends RelativeLayout {
+    private Paint paint;
 
     public MyView(Context context) {
         super(context);
@@ -25,7 +28,15 @@ public class MyView extends RelativeLayout {
         addView(leftBar);
         addView(rightBar);
 
+        paint = new Paint();
+
+        paint.setColor(0xFF000000);
+
         setWillNotDraw(false);
+    }
+
+    public void onDraw(Canvas canvas) {
+        canvas.drawCircle(center.x,center.y,50,paint);
     }
 
 }

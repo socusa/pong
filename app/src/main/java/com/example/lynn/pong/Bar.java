@@ -28,6 +28,16 @@ public class Bar extends RelativeLayout {
         int starty = layoutParams.topMargin;
         int stopy = starty + 400;
 
+        if (left) {
+            if (center.y >= starty && center.y <= stopy && center.x-50 <= 50) {
+                return(true);
+            }
+        } else {
+            if (center.y >= starty && center.y <= stopy && center.x+50 >= width-50) {
+                return(true);
+            }
+        }
+
         return(false);
     }
 
