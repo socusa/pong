@@ -48,7 +48,7 @@ public class MyThread implements Runnable {
             if (center.y - 50 <= 0 || center.y + 50 >= height-170) {
                 distancey = 1 + (int)(10*Math.random());
 
-                up = !left;
+                up = !up;
             }
 
             myView.post(new Runnable() {
@@ -60,7 +60,7 @@ public class MyThread implements Runnable {
 
             });
 
-            pause(0.1);
+            pause(0.01);
         }
 
     }
