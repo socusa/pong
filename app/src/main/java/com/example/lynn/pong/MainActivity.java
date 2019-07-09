@@ -2,6 +2,7 @@ package com.example.lynn.pong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MediaPlayer mp = MediaPlayer.create(this,R.raw.bounce);
+
+        mp.start();
 
         setContentView(myView = new MyView(this));
     }

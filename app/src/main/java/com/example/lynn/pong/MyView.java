@@ -19,6 +19,9 @@ public class MyView extends RelativeLayout {
         leftBar = new Bar(context,0,100);
         rightBar = new Bar(context,width-50,100);
 
+        leftBar.setOnTouchListener(listener);
+        rightBar.setOnTouchListener(listener);
+
         addView(leftBar);
         addView(rightBar);
 
