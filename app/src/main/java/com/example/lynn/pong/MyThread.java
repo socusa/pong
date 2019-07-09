@@ -47,6 +47,17 @@ public class MyThread implements Runnable {
 
             if (center.y - 50 <= 0 && center.y + 50 >= width-170)
                 up = !left;
+
+            myView.post(new Runnable() {
+
+                @Override
+                public void run() {
+                    myView.invalidate();
+                }
+
+            });
+
+            pause(0.5);
         }
 
     }
